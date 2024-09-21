@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <main class="flex justify-center">
+        <div class="mockup-phone">
+            <div class="camera"></div>
+            <div class="display">
+                <div class="artboard bg-gray-100 phone-3 px-5 overflow-scroll">
+                    <div class="flex justify-between pt-10">
+                        <div class="flex gap-2">
+                            <div>
+                                <img class="w-12" src="./img/payoo.png" alt="">
+                            </div>
+                            <div>
+                                <h3 class="font-extrabold">$45000</h3>
+                                <p>Available Balance</p>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn btn-outline">Log Out</button>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+
+                    <section>
+                        <h1 class="text-2xl font-bold mb-3">Welcome to Payooo!</h1>
+                        <p>Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+                        <div class="grid grid-cols-3 gap-5 mt-5">
+                            <button class="btn btn-outline btn-info">Add Money</button>
+                            <button class="btn btn-outline btn-info">Cashout</button>
+                            <button class="btn btn-outline btn-info">Transfer Money</button>
+                            <button class="btn btn-outline btn-info">Get Bonus</button>
+                            <button class="btn btn-outline btn-info">Pay Bill</button>
+                            <button class="btn btn-outline btn-info">Transaction</button>
+                        </div>
+                    </section>
+                    <!-- Add money  -->
+                    <section>
+                        <h2 class="font-bold my-5">Add Money</h2>
+                        <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-sm">
+                            <form class="card-body">
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text font-bold">Select A Bank</span>
+                                    </label>
+                                    <select title="Please select a bank"
+                                        class="select bg-gray-100 rounded-3xl w-full max-w-xs">
+                                        <option disabled selected>Select a bank</option>
+                                        <option>IFIC Bank</option>
+                                        <option>Grameen Bank</option>
+                                        <option>Janata Bank</option>
+                                        <option>AB Bank</option>
+                                        <option>City Bank</option>
+                                    </select>
+                                </div>
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text font-bold">Bank Account Number</span>
+                                    </label>
+                                    <input type="password" placeholder="Enter 11 digit account number"
+                                        class="input rounded-3xl bg-gray-100" required />
+                                </div>
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text font-bold">Amount to Add</span>
+                                    </label>
+                                    <input type="password" placeholder="Add Amount to Withdraw"
+                                        class="input rounded-3xl bg-gray-100" required />
+                                </div>
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text font-bold">Pin Number</span>
+                                    </label>
+                                    <input type="password" placeholder="Enter 4 Digit Pin"
+                                        class="input rounded-3xl bg-gray-100" required />
+                                </div>
+                                <div class="form-control mt-6">
+                                    <button type="submit" class="btn btn-primary rounded-3xl">Add Money</button>
+                                </div>
+                            </form>
+                        </div>
+                    </section>
+                    <!-- cash out -->
+
+                    <section>
+                        <h2 class="font-bold my-5">Cashout</h1>
+                            <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                                <form class="card-body">
+                                    <div class="form-control">
+                                        <label class="label">
+                                            <span class="label-text font-bold">Agent Number</span>
+                                        </label>
+                                        <input type="email" placeholder="Enter 11 Digit Number"
+                                            class="input rounded-3xl bg-gray-100" required />
+                                    </div>
+                                    <div class="form-control">
+                                        <label class="label">
+                                            <span class="label-text font-bold">Amount</span>
+                                        </label>
+                                        <input type="email" placeholder="Enter Amount to Withdraw"
+                                            class="input rounded-3xl bg-gray-100" required />
+                                    </div>
+                                    <div class="form-control">
+                                        <label class="label">
+                                            <span class="label-text font-bold">Pin Number</span>
+                                        </label>
+                                        <input type="password" placeholder="Enter 4 Digit Pin Number"
+                                            class="input rounded-3xl bg-gray-100" required />
+                                    </div>
+                                    <div class="form-control mt-6">
+                                        <button type="submit" class="btn btn-primary rounded-3xl">Withdraw
+                                            Money</button>
+                                    </div>
+                                </form>
+                            </div>
+                    </section>
+                    <!-- Transfer Money -->
+
+                    <section>
+                        <h1 class="font-bold my-5">Transfer Money</h1>
+                        <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                            <form class="card-body">
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text font-bold">User Account Number</span>
+                                    </label>
+                                    <input type="email" placeholder="Enter 11 Digit Number"
+                                        class="input rounded-3xl bg-gray-100" required />
+                                </div>
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text font-bold">Amount</span>
+                                    </label>
+                                    <input type="email" placeholder="Enter Amount to Transfer"
+                                        class="input rounded-3xl bg-gray-100" required />
+                                </div>
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text font-bold">Pin Number</span>
+                                    </label>
+                                    <input type="password" placeholder="Enter 4 Digit Pin Number"
+                                        class="input rounded-3xl bg-gray-100" required />
+                                </div>
+                                <div class="form-control mt-6">
+                                    <button type="submit" class="btn btn-primary rounded-3xl">Send Now</button>
+                                </div>
+                            </form>
+                        </div>
+                    </section>
+                    <!-- Get Bonus -->
+                     <section>
+                        <h1 class="font-bold my-5">Get Bonus</h1>
+                        <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                            <form class="card-body">
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text font-bold">Enter Bonus Coupon</span>
+                                    </label>
+                                    <input type="password" placeholder="Enter Your Coupon" class="input rounded-3xl bg-gray-100" required />
+                                </div>
+                                <div class="form-control mt-6">
+                                    <button type="submit" class="btn btn-primary rounded-3xl">Get Bonus</button>
+                                </div>
+                            </form>
+                        </div>
+                     </section>
+                </div>
+            </div>
+        </div>
+
+    </main>
+</body>
+
+</html>
