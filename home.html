@@ -21,30 +21,30 @@
                                 <img class="w-12" src="./img/payoo.png" alt="">
                             </div>
                             <div>
-                                <h3 class="font-extrabold">$45000</h3>
+                                <h3 class="font-extrabold">$<span id="balance">45000</span></h3>
                                 <p>Available Balance</p>
                             </div>
                         </div>
                         <div>
-                            <button class="btn btn-outline">Log Out</button>
+                            <button id="log-out-btn" class="btn btn-outline">Log Out</button>
                         </div>
                     </div>
                     <div class="divider"></div>
-
+                    <!-- all button -->
                     <section>
                         <h1 class="text-2xl font-bold mb-3">Welcome to Payooo!</h1>
                         <p>Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
                         <div class="grid grid-cols-3 gap-5 mt-5">
-                            <button class="btn btn-outline btn-info">Add Money</button>
-                            <button class="btn btn-outline btn-info">Cashout</button>
-                            <button class="btn btn-outline btn-info">Transfer Money</button>
-                            <button class="btn btn-outline btn-info">Get Bonus</button>
-                            <button class="btn btn-outline btn-info">Pay Bill</button>
-                            <button class="btn btn-outline btn-info">Transaction</button>
+                            <button id="btn-add-money" class="btn btn-outline btn-info">Add Money</button>
+                            <button id="btn-cash-out" class="btn btn-outline btn-info">Cashout</button>
+                            <button id="btn-transfer-money" class="btn btn-outline btn-info">Transfer Money</button>
+                            <button id="btn-get-bonus" class="btn btn-outline btn-info">Get Bonus</button>
+                            <button id="btn-pay-bill" class="btn btn-outline btn-info">Pay Bill</button>
+                            <button id="btn-transaction" class="btn btn-outline btn-info">Transaction</button>
                         </div>
                     </section>
                     <!-- Add money  -->
-                    <section>
+                    <section id="add-money-section">
                         <h2 class="font-bold my-5">Add Money</h2>
                         <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-sm">
                             <form class="card-body">
@@ -66,32 +66,34 @@
                                     <label class="label">
                                         <span class="label-text font-bold">Bank Account Number</span>
                                     </label>
-                                    <input type="password" placeholder="Enter 11 digit account number"
+                                    <input id="add-money-ac-number" type="text" maxlength="11"
+                                        placeholder="Enter 11 digit account number"
                                         class="input rounded-3xl bg-gray-100" required />
                                 </div>
                                 <div class="form-control">
                                     <label class="label">
                                         <span class="label-text font-bold">Amount to Add</span>
                                     </label>
-                                    <input type="password" placeholder="Add Amount to Withdraw"
+                                    <input id="add-money-amount" type="number" placeholder="Add Amount to Withdraw"
                                         class="input rounded-3xl bg-gray-100" required />
                                 </div>
                                 <div class="form-control">
                                     <label class="label">
                                         <span class="label-text font-bold">Pin Number</span>
                                     </label>
-                                    <input type="password" placeholder="Enter 4 Digit Pin"
+                                    <input id="add-money-pin-number" type="password" placeholder="Enter 4 Digit Pin"
                                         class="input rounded-3xl bg-gray-100" required />
                                 </div>
                                 <div class="form-control mt-6">
-                                    <button type="submit" class="btn btn-primary rounded-3xl">Add Money</button>
+                                    <button id="add-money-btn" type="submit" class="btn btn-primary rounded-3xl">Add
+                                        Money</button>
                                 </div>
                             </form>
                         </div>
                     </section>
                     <!-- cash out -->
 
-                    <section>
+                    <section id="cash-out-section" class="hidden">
                         <h2 class="font-bold my-5">Cashout</h1>
                             <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                                 <form class="card-body">
@@ -99,25 +101,25 @@
                                         <label class="label">
                                             <span class="label-text font-bold">Agent Number</span>
                                         </label>
-                                        <input type="email" placeholder="Enter 11 Digit Number"
+                                        <input id="cash-out-agent-number" type="text" maxlength="11" placeholder="Enter 11 Digit Number"
                                             class="input rounded-3xl bg-gray-100" required />
                                     </div>
                                     <div class="form-control">
                                         <label class="label">
                                             <span class="label-text font-bold">Amount</span>
                                         </label>
-                                        <input type="email" placeholder="Enter Amount to Withdraw"
+                                        <input id="cash-out-amount" type="number" placeholder="Enter Amount to Withdraw"
                                             class="input rounded-3xl bg-gray-100" required />
                                     </div>
                                     <div class="form-control">
                                         <label class="label">
                                             <span class="label-text font-bold">Pin Number</span>
                                         </label>
-                                        <input type="password" placeholder="Enter 4 Digit Pin Number"
+                                        <input id="cash-out-pin-number" type="password" placeholder="Enter 4 Digit Pin Number"
                                             class="input rounded-3xl bg-gray-100" required />
                                     </div>
                                     <div class="form-control mt-6">
-                                        <button type="submit" class="btn btn-primary rounded-3xl">Withdraw
+                                        <button id="cash-out-btn" type="submit" class="btn btn-primary rounded-3xl">Withdraw
                                             Money</button>
                                     </div>
                                 </form>
@@ -125,7 +127,7 @@
                     </section>
                     <!-- Transfer Money -->
 
-                    <section>
+                    <section id="transfer-money-section" class="hidden">
                         <h1 class="font-bold my-5">Transfer Money</h1>
                         <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                             <form class="card-body">
@@ -133,31 +135,31 @@
                                     <label class="label">
                                         <span class="label-text font-bold">User Account Number</span>
                                     </label>
-                                    <input type="email" placeholder="Enter 11 Digit Number"
+                                    <input type="text" maxlength="" placeholder="Enter 11 Digit Number"
                                         class="input rounded-3xl bg-gray-100" required />
                                 </div>
                                 <div class="form-control">
                                     <label class="label">
                                         <span class="label-text font-bold">Amount</span>
                                     </label>
-                                    <input type="email" placeholder="Enter Amount to Transfer"
+                                    <input id="transfer-money-amount" type="number" placeholder="Enter Amount to Transfer"
                                         class="input rounded-3xl bg-gray-100" required />
                                 </div>
                                 <div class="form-control">
                                     <label class="label">
                                         <span class="label-text font-bold">Pin Number</span>
                                     </label>
-                                    <input type="password" placeholder="Enter 4 Digit Pin Number"
+                                    <input id="transfer-money-pin" type="password" placeholder="Enter 4 Digit Pin Number"
                                         class="input rounded-3xl bg-gray-100" required />
                                 </div>
                                 <div class="form-control mt-6">
-                                    <button type="submit" class="btn btn-primary rounded-3xl">Send Now</button>
+                                    <button id="transfer-money-btn" type="submit" class="btn btn-primary rounded-3xl">Send Now</button>
                                 </div>
                             </form>
                         </div>
                     </section>
                     <!-- Get Bonus -->
-                     <section>
+                    <section id="get-bonus-section" class="hidden">
                         <h1 class="font-bold my-5">Get Bonus</h1>
                         <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                             <form class="card-body">
@@ -165,19 +167,75 @@
                                     <label class="label">
                                         <span class="label-text font-bold">Enter Bonus Coupon</span>
                                     </label>
-                                    <input type="password" placeholder="Enter Your Coupon" class="input rounded-3xl bg-gray-100" required />
+                                    <input type="text" placeholder="Enter Your Coupon"
+                                        class="input rounded-3xl bg-gray-100" required />
                                 </div>
                                 <div class="form-control mt-6">
-                                    <button type="submit" class="btn btn-primary rounded-3xl">Get Bonus</button>
+                                    <button id="get-bonus-btn" type="submit" class="btn btn-primary rounded-3xl">Get Bonus</button>
                                 </div>
                             </form>
                         </div>
-                     </section>
+                    </section>
+                    <!-- Pay Bill -->
+
+                    <section id="pay-bill-section" class="hidden">
+                        <h2 class="font-bold my-5">Pay Bill</h2>
+                        <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-sm">
+                            <form class="card-body">
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text font-bold">Select To Pay</span>
+                                    </label>
+                                    <select title="Please select Payment"
+                                        class="select bg-gray-100 rounded-3xl w-full max-w-xs">
+                                        <option disabled selected>Select Payment</option>
+                                        <option>School</option>
+                                        <option>College</option>
+                                        <option>University</option>
+                                        <option>Shop</option>
+                                    </select>
+                                </div>
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text font-bold">Biller Account Number</span>
+                                    </label>
+                                    <input type="text" maxlength="11" placeholder="Enter account number"
+                                        class="input rounded-3xl bg-gray-100" required />
+                                </div>
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text font-bold">Amount to Pay</span>
+                                    </label>
+                                    <input id="pay-bill-amount" type="number" placeholder="Add Amount to Pay"
+                                        class="input rounded-3xl bg-gray-100" required />
+                                </div>
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text font-bold">Pin Number</span>
+                                    </label>
+                                    <input id="pay-bill-pin" type="password" placeholder="Enter 4 Digit Pin"
+                                        class="input rounded-3xl bg-gray-100" required />
+                                </div>
+                                <div class="form-control mt-6">
+                                    <button id="pay-bill-btn" type="submit" class="btn btn-primary rounded-3xl">Pay Now</button>
+                                </div>
+                            </form>
+                        </div>
+                    </section>
+                    <!-- Transaction -->
+                    <section id="transaction-section" class="hidden">
+                        <h1 class="font-bold my-5">Transaction History</h1>
+                        <div id="transaction-container">
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>
 
     </main>
+    <script src="./js/utilities.js"></script>
+    <script src="./js/index.js"></script>
+
 </body>
 
 </html>
